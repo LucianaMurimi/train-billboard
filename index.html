@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css">
+        <title>BillBoard</title>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Josefin Sans:300");
+            @import url("https://fonts.googleapis.com/css?family=Alata:400");
+
+            
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-size: 14px/1.5 "Josefin Sans", sans-serif;;
+                color: #fff;
+
+                background-image: linear-gradient(to right,#031927 0%,rgba(3, 25, 39, 0.7) 100%), url("train sketch.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover; 
+            }
+            
+            /*=============================================
+                grid styling
+            */
+            .section-1 {
+                grid-area: section-1;
+                margin: 3em 0 0 6em;
+            }
+            .section-1 h1 {
+                font-size: 2.2em;
+                font-weight: bolder;
+                color: #e91700;
+                letter-spacing: 4px; 
+	            word-spacing: 7px;
+                text-shadow: .1em .1em .2em #000;
+            }
+            .section-2 {
+                grid-area: section-2;
+                margin: 3em 0 0 6em;
+            }
+            .section-2 p {
+                max-width: 500px;
+                box-shadow: 0 8px 16px 0 rgba(123,145,159,0.2);
+                border-radius: 15px;
+                padding: 0.4em;
+                font-size: 3.5em;
+                text-transform: uppercase;
+            }
+            .section-2 p:hover {
+                box-shadow: 0 12px 20px 0 rgba(123,145,159,0.2);
+            }
+            .section-3 {
+                grid-area: section-3;
+                margin-right: 6em;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                text-align: center;
+                line-height: 2; 
+                word-spacing: 6px; 
+                letter-spacing: 1px;
+                font-weight: bolder; 
+            }
+            .section-3 h2 {
+                font-size: 1.2em;
+                font-weight: bolder;
+                color:rgba(186, 18, 0, 0.9);
+                text-shadow: .1em .1em .2em #0c0c0c;
+                text-transform: uppercase;
+            }
+            .section-3 p {
+                font-size: 14px/1.5 "Alata" sans-serif;
+            }
+            .section-4 {
+                grid-area: section-4;
+                margin-left: 6em;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;   
+            }
+            .section-4 ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+            }
+            .section-4 ul li{
+                padding: 5px;
+                font-size: 1.2em;
+            }
+            .section-4 a {
+                text-decoration: none;
+                color: inherit;
+            }
+            .section-4 .vertical {
+                border-left: 4px solid #ba1200;
+                height: 100px;
+                position: relative;
+                left: 10px; 
+            }
+            .section-5 {
+                grid-area: section-5;
+                margin-right: 6em;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .container {
+                min-height: 100vh;
+                display: grid;
+                grid-template-columns: 55% 45%;
+                grid-template-rows: 15% 40% 45%;
+                grid-template-areas: "section-1 section-1" "section-2 section-3" "section-4 section-5";
+            }
+
+            /*=============================================
+                table styling
+            */
+            table { 
+                width: 100%;
+                border-collapse: collapse; 
+                font-family: monospace;
+            }
+            /* zebra striping */
+            tr:nth-of-type(odd) { 
+                background: #3f5563; 
+            }
+            tr:first-child { 
+                background: rgba(186, 18, 0, 0.5); 
+            }
+            td { 
+                padding: 5px 15px; 
+                text-align: left; 
+            }
+            /*=============================================*/
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="section-1">
+                <h1>train logo</h1>
+            </div>
+
+            <div class="section-2">
+                <p>Explore the world with train name</p>   <!--slogan-->
+            </div>
+
+            <div class="section-3">
+                <h2>Train Information</h2>
+                <p>Distance | Umbali: <span></span> Km</p>
+                <p>ETA | Muda: <span></span> Hours</p>  
+            </div>
+
+            <div class="section-4">
+                <ul class="icons-list">
+                    <li><a href="" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
+                    <li><a href="" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
+                    <li><a href="" target="_blank"><i class="icon ion-logo-instagram"></i></a></li>
+                </ul>
+                <div class="vertical"></div>
+            </div>
+            
+            <div class="section-5">
+                <table>
+                    <tbody>
+                        <tr><td><strong>#</strong></td><td><strong>TRAIN TYPE</strong></td><td><strong>ROUTE</strong></td><td><strong>DATE OF JOURNEY</strong></td></tr>
+                        <tr><td>1</td><td>ORDINARY</td><td>TABORA - ARUSHA</td><td>May, 26 2021</td></tr>
+                        <tr><td>2</td><td>ORDINARY</td><td>MWANZA - ARUSHA</td><td>May, 26 2021</td></tr>
+                        <tr><td>3</td><td>DELUXE</td><td>DAR ES SALAAM - ARUSHA</td><td>May, 27 2021</td></tr>
+                        <tr><td>3</td><td>DELUXE</td><td>ARUSHA - TABORA</td><td>May, 27 2021</td></tr>
+                        <tr><td>4</td><td>DELUXE</td><td>ARUSHA - MWANZA</td><td>May, 27 2021</td></tr>
+                        <tr><td>5</td><td>DELUXE</td><td>ARUSHA - DAR-ES-SALAAM</td><td>May, 29 2021</td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+
+    </body>
+</html>
